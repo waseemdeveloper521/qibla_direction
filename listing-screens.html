@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Play Store Listing Screens — Qibla Direction</title>
+    <link rel="icon" href="logo.png" />
+    <style>
+      :root {
+        --bg: #0f1a14;
+        --card: rgba(255, 255, 255, 0.05);
+        --line: rgba(255, 255, 255, 0.1);
+        --text: #f5f7f2;
+        --muted: #a8b5aa;
+        --accent: #e8913a;
+        --accent-dark: #c46e1a;
+        --mint: #e5efc8;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        background: radial-gradient(1200px 600px at 10% -10%, #1a3326, var(--bg));
+        color: var(--text);
+        min-height: 100vh;
+      }
+      .bar {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        background: rgba(15, 26, 20, 0.92);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--line);
+      }
+      .bar h1 {
+        margin: 0;
+        font-size: 1.15rem;
+      }
+      .bar p {
+        margin: 0.25rem 0 0;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.55rem;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.35rem;
+        padding: 0.7rem 1.15rem;
+        border-radius: 999px;
+        border: 0;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+        color: #fff;
+        background: var(--accent);
+      }
+      .btn:hover {
+        background: var(--accent-dark);
+      }
+      .btn.ghost {
+        background: transparent;
+        border: 1px solid var(--line);
+        color: var(--text);
+      }
+      .intro {
+        max-width: 1180px;
+        margin: 1.5rem auto 0;
+        padding: 0 1.5rem;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+      .intro strong {
+        color: var(--mint);
+      }
+      .gallery {
+        max-width: 1180px;
+        margin: 1.25rem auto 3rem;
+        padding: 0 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 1.25rem;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      .card img {
+        width: 100%;
+        aspect-ratio: 1080 / 1920;
+        object-fit: cover;
+        display: block;
+        background: #111;
+      }
+      .meta {
+        padding: 1rem 1.05rem 1.15rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+      }
+      .meta h2 {
+        margin: 0;
+        font-size: 1rem;
+      }
+      .meta span {
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+      .meta .btn {
+        width: 100%;
+      }
+      .order {
+        max-width: 1180px;
+        margin: 0 auto 2.5rem;
+        padding: 0 1.5rem;
+      }
+      .order ol {
+        margin: 0.5rem 0 0;
+        padding-left: 1.2rem;
+        color: var(--muted);
+      }
+      .order li {
+        margin-bottom: 0.35rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bar">
+      <div>
+        <h1>Play Store listing screens</h1>
+        <p>Feature graphic 1024×500 · phone screens 1080×1920</p>
+      </div>
+      <div class="actions">
+        <a class="btn ghost" href="index.html">← Website</a>
+        <a class="btn" href="listing/feature-graphic.png" download
+          >Feature graphic</a
+        >
+      </div>
+    </div>
+
+    <p class="intro">
+      Built from your real screenshots with premium phone frames and
+      conversion headlines. Upload in this order so the first tiles sell the
+      install: <strong>Qibla → Prayer → Tasbih → Calendar → Language → Settings</strong>.
+    </p>
+
+    <div class="feature-block" style="max-width:1180px;margin:1.25rem auto 0;padding:0 1.5rem">
+      <article class="card" style="overflow:hidden">
+        <img
+          src="listing/feature-graphic.png"
+          alt="Play Store feature graphic"
+          style="aspect-ratio:1024/500;width:100%;object-fit:cover;display:block"
+        />
+        <div class="meta">
+          <h2>Store feature graphic · 1024 × 500</h2>
+          <span>Required for Google Play listing header / promo banner</span>
+          <a
+            class="btn"
+            href="listing/feature-graphic.png"
+            download="qibla-feature-graphic.png"
+            >Download feature graphic</a
+          >
+        </div>
+      </article>
+    </div>
+
+    <div class="gallery">
+      <article class="card">
+        <img src="listing/01-qibla.png" alt="Find the Qibla instantly" />
+        <div class="meta">
+          <h2>01 · Find Qibla instantly</h2>
+          <span>Lead screenshot — strongest install hook</span>
+          <a class="btn" href="listing/01-qibla.png" download="qibla-listing-01.png"
+            >Download PNG</a
+          >
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="listing/02-prayer.png" alt="Prayer times made simple" />
+        <div class="meta">
+          <h2>02 · Prayer times made simple</h2>
+          <span>Daily habit + Azan alerts</span>
+          <a class="btn" href="listing/02-prayer.png" download="qibla-listing-02.png"
+            >Download PNG</a
+          >
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="listing/03-tasbih.png" alt="Digital tasbih" />
+        <div class="meta">
+          <h2>03 · Tasbih you’ll actually use</h2>
+          <span>Delight moment for store browsers</span>
+          <a class="btn" href="listing/03-tasbih.png" download="qibla-listing-03.png"
+            >Download PNG</a
+          >
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="listing/04-calendar.png" alt="Hijri calendar" />
+        <div class="meta">
+          <h2>04 · Hijri calendar at a glance</h2>
+          <span>Dual calendar clarity</span>
+          <a class="btn" href="listing/04-calendar.png" download="qibla-listing-04.png"
+            >Download PNG</a
+          >
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="listing/05-language.png" alt="Language selection" />
+        <div class="meta">
+          <h2>05 · Use the app in the language you love</h2>
+          <span>English · Arabic · Urdu</span>
+          <a class="btn" href="listing/05-language.png" download="qibla-listing-05.png"
+            >Download PNG</a
+          >
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="listing/06-settings.png" alt="Prayer settings" />
+        <div class="meta">
+          <h2>06 · Fine-tune prayer settings</h2>
+          <span>Closing CTA slide</span>
+          <a class="btn" href="listing/06-settings.png" download="qibla-listing-06.png"
+            >Download PNG</a
+          >
+        </div>
+      </article>
+    </div>
+
+    <div class="order">
+      <h2 style="margin: 0; font-size: 1.05rem">Folder paths</h2>
+      <ol>
+        <li>Ready PNGs: <code>website/listing/*.png</code></li>
+        <li>Raw shots: <code>website/shots/*.jpeg</code></li>
+        <li>Regenerate: <code>python3 website/generate-listing.py</code></li>
+      </ol>
+    </div>
+  </body>
+</html>
