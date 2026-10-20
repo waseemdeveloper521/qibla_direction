@@ -44,3 +44,4 @@ Open the URL shown in the terminal.
 - App name: Qibla Direction  
 - Package: `com.qibladirection.app`
 # qibla_direction
+# qibla_direction
